@@ -29,6 +29,14 @@ I focus on bridging **business domain logic**, **data contracts**, and **AI-assi
 
 ---
 
+### 🐍 Live Contribution Snake & Coding Time Sync
+
+<div align="center">
+  <img src="./assets/github-snake-dark.svg" alt="duytrinh-data Purple Contribution Snake eating GitHub contribution cells" width="100%" />
+</div>
+
+---
+
 ### 🛠️ Tech Stack & Tooling Matrix
 
 <table>
