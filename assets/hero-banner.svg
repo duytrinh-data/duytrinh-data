@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="100%" height="100%" role="img" aria-label="Trịnh Đình Duy — Data Science, AI Agentic Analytics &amp; Business Automation">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071526" />
+      <stop offset="52%" stop-color="#0E294B" />
+      <stop offset="100%" stop-color="#091C34" />
+    </linearGradient>
+    <linearGradient id="argStripe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#75AADB" />
+      <stop offset="45%" stop-color="#FFFFFF" />
+      <stop offset="55%" stop-color="#F6B40E" />
+      <stop offset="100%" stop-color="#75AADB" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#133158" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#0A1E38" stop-opacity="0.94" />
+    </linearGradient>
+    <linearGradient id="celesteGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#75AADB" stop-opacity="0.0" />
+      <stop offset="50%" stop-color="#75AADB" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.0" />
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#75AADB" stroke-width="0.6" stroke-opacity="0.12" />
+    </pattern>
+    <style>
+      .title { font: 800 36px 'Segoe UI', -apple-system, BlinkMacSystemFont, Inter, sans-serif; fill: #FFFFFF; letter-spacing: -0.5px; }
+      .eyebrow { font: 700 12px 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace; fill: #75AADB; letter-spacing: 2.2px; }
+      .subtitle { font: 500 16px 'Segoe UI', -apple-system, BlinkMacSystemFont, Inter, sans-serif; fill: #CBD5E1; }
+      .pill-num { font: 800 11px 'JetBrains Mono', Consolas, monospace; fill: #071526; }
+      .pill-title { font: 700 13px 'Segoe UI', Inter, sans-serif; fill: #F8FAFC; }
+      .pill-sub { font: 500 11.5px 'Segoe UI', Inter, sans-serif; fill: #94A3B8; }
+      .metric-val { font: 800 20px 'JetBrains Mono', Consolas, monospace; fill: #75AADB; }
+      .metric-lbl { font: 600 11px 'Segoe UI', Inter, sans-serif; fill: #94A3B8; }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.95; }
+      }
+      @keyframes blinkEye {
+        0%, 92%, 100% { transform: scaleY(1); }
+        95% { transform: scaleY(0.12); }
+      }
+      @keyframes scanLine {
+        0% { transform: translateX(-300px); }
+        100% { transform: translateX(1250px); }
+      }
+      .pulse { animation: pulseGlow 3.2s ease-in-out infinite; }
+      .robot-eye { transform-origin: center 116px; animation: blinkEye 4.5s infinite; }
+      .scan-bar { animation: scanLine 6s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="350" rx="18" fill="url(#bgGrad)" stroke="#1E3A5F" stroke-width="2" />
+  <rect width="1200" height="350" rx="18" fill="url(#grid)" />
+
+  <!-- Top Argentina Flag Celeste-White-Sun Gold Stripe -->
+  <rect x="2" y="2" width="1196" height="6" rx="3" fill="url(#argStripe)" />
+  <rect x="0" y="8" width="320" height="2" fill="url(#celesteGlow)" class="scan-bar" />
+
+  <!-- Ambient Celeste Radial Glows -->
+  <circle cx="1040" cy="110" r="180" fill="#75AADB" fill-opacity="0.10" class="pulse" />
+  <circle cx="140" cy="290" r="140" fill="#38BDF8" fill-opacity="0.07" />
+
+  <!-- Left Square Robot-Head Mascot Badge (Duy AI OS Signature) -->
+  <g transform="translate(48, 44)">
+    <rect x="0" y="0" width="116" height="116" rx="22" fill="#102A4C" stroke="#75AADB" stroke-width="2" />
+    <rect x="8" y="8" width="100" height="100" rx="16" fill="#75AADB" fill-opacity="0.16" />
+    <!-- Robot Square Head -->
+    <rect x="22" y="24" width="72" height="68" rx="12" fill="#75AADB" stroke="#071526" stroke-width="2.5" />
+    <!-- Robot Visor Screen -->
+    <rect x="31" y="36" width="54" height="34" rx="7" fill="#071526" stroke="#E2E8F0" stroke-width="1.5" />
+    <!-- Glowing Eyes -->
+    <g class="robot-eye">
+      <rect x="40" y="46" width="11" height="14" rx="3" fill="#38BDF8" />
+      <rect x="65" y="46" width="11" height="14" rx="3" fill="#38BDF8" />
+      <rect x="43" y="48" width="4" height="4" rx="1" fill="#FFFFFF" />
+      <rect x="68" y="48" width="4" height="4" rx="1" fill="#FFFFFF" />
+    </g>
+    <!-- Robot Smile Indicator -->
+    <path d="M 48 63 Q 58 68 68 63" fill="none" stroke="#F6B40E" stroke-width="2.2" stroke-linecap="round" />
+    <!-- Side Bolts -->
+    <rect x="16" y="48" width="6" height="18" rx="2" fill="#F6B40E" />
+    <rect x="94" y="48" width="6" height="18" rx="2" fill="#F6B40E" />
+    <!-- Status Pill -->
+    <rect x="18" y="98" width="80" height="14" rx="7" fill="#071526" stroke="#75AADB" stroke-width="1" />
+    <circle cx="28" cy="105" r="3" fill="#10B981" class="pulse" />
+    <text x="36" y="108.5" font-family="Consolas, monospace" font-size="8.5" font-weight="700" fill="#E2E8F0">DUY AI OS</text>
+  </g>
+
+  <!-- Main Identity Headline -->
+  <g transform="translate(188, 62)">
+    <text x="0" y="0" class="eyebrow">DATA SCIENCE · AI AGENTIC ANALYTICS · MARKETING AUTOMATION</text>
+    <text x="0" y="42" class="title">Trịnh Đình Duy (duytrinh-data)</text>
+    <text x="0" y="72" class="subtitle">
+      Data Science @ International University — VNU-HCM (HCMIU) · Building evidence-driven BI models &amp; AI workflows
+    </text>
+    <text x="0" y="96" class="subtitle" fill="#93C5FD">
+      "Understand the domain → Lock the data contract → Automate the workflow → Verify with real evidence."
+    </text>
+  </g>
+
+  <!-- Right Live Telemetry Panel -->
+  <g transform="translate(930, 38)">
+    <rect x="0" y="0" width="222" height="124" rx="14" fill="url(#cardGrad)" stroke="#75AADB" stroke-opacity="0.45" stroke-width="1.2" />
+    <text x="18" y="26" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#F6B40E" letter-spacing="1.2">
+      ● OPERATING FOCUS
+    </text>
+    <line x1="18" y1="35" x2="204" y2="35" stroke="#75AADB" stroke-opacity="0.22" />
+    <text x="18" y="58" class="metric-val">Data + AI</text>
+    <text x="18" y="75" class="metric-lbl">Analytics &amp; Automation</text>
+    <text x="18" y="100" font-family="Consolas, monospace" font-size="11.5" font-weight="700" fill="#E2E8F0">
+      📍 Ho Chi Minh City, VN
+    </text>
+    <text x="18" y="115" font-family="Consolas, monospace" font-size="10.5" fill="#94A3B8">
+      🎓 B.Sc. Data Science (HCMIU)
+    </text>
+  </g>
+
+  <!-- Bottom 4 Architectural Pillars -->
+  <g transform="translate(48, 198)">
+    <!-- Pillar 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="264" height="114" rx="12" fill="url(#cardGrad)" stroke="#75AADB" stroke-opacity="0.4" stroke-width="1.2" />
+      <rect x="16" y="16" width="34" height="20" rx="5" fill="#75AADB" />
+      <text x="24" y="30" class="pill-num">01</text>
+      <text x="58" y="30" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#75AADB">ANALYTICS &amp; BI</text>
+      <text x="16" y="58" class="pill-title">Data Contract &amp; Power BI</text>
+      <text x="16" y="78" class="pill-sub">KPI/Metric/Logic Trees, DAX,</text>
+      <text x="16" y="95" class="pill-sub">Data Dictionary &amp; Reconciliation</text>
+    </g>
+
+    <!-- Pillar 2 -->
+    <g transform="translate(280, 0)">
+      <rect width="264" height="114" rx="12" fill="url(#cardGrad)" stroke="#75AADB" stroke-opacity="0.4" stroke-width="1.2" />
+      <rect x="16" y="16" width="34" height="20" rx="5" fill="#F6B40E" />
+      <text x="24" y="30" class="pill-num">02</text>
+      <text x="58" y="30" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#F6B40E">MARKETING DATA</text>
+      <text x="16" y="58" class="pill-title">Meta Ads &amp; E-Com Analytics</text>
+      <text x="16" y="78" class="pill-sub">Campaign → AdSet → Ad Grain,</text>
+      <text x="16" y="95" class="pill-sub">Haravan / Meta Attribution &amp; EDA</text>
+    </g>
+
+    <!-- Pillar 3 -->
+    <g transform="translate(560, 0)">
+      <rect width="264" height="114" rx="12" fill="url(#cardGrad)" stroke="#75AADB" stroke-opacity="0.4" stroke-width="1.2" />
+      <rect x="16" y="16" width="34" height="20" rx="5" fill="#38BDF8" />
+      <text x="24" y="30" class="pill-num">03</text>
+      <text x="58" y="30" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#38BDF8">WORKFLOW OPS</text>
+      <text x="16" y="58" class="pill-title">n8n · Lark Base · REST API</text>
+      <text x="16" y="78" class="pill-sub">Automated Ad Ingestion, HRM</text>
+      <text x="16" y="95" class="pill-sub">Schema Design &amp; Operational Portals</text>
+    </g>
+
+    <!-- Pillar 4 -->
+    <g transform="translate(840, 0)">
+      <rect width="264" height="114" rx="12" fill="url(#cardGrad)" stroke="#75AADB" stroke-opacity="0.4" stroke-width="1.2" />
+      <rect x="16" y="16" width="34" height="20" rx="5" fill="#10B981" />
+      <text x="24" y="30" class="pill-num">04</text>
+      <text x="58" y="30" font-family="Consolas, monospace" font-size="11" font-weight="700" fill="#10B981">AGENTIC SYSTEMS</text>
+      <text x="16" y="58" class="pill-title">Data Science &amp; Interactive Web</text>
+      <text x="16" y="78" class="pill-sub">Python, SQL, TypeScript, React,</text>
+      <text x="16" y="95" class="pill-sub">Three.js &amp; Context-Driven AI OS</text>
+    </g>
+  </g>
+</svg>
