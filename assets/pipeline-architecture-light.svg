@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 224" width="100%" role="img" aria-label="Analytics and Automation Operating Pipeline">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+      .card { fill: #F6F8FA; stroke: #D0D7DE; stroke-width: 1; }
+      .card-final { fill: #F6F8FA; stroke: #1A7F37; stroke-opacity: 0.55; stroke-width: 1; }
+      .idx { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; font-weight: 600; fill: #1A7F37; }
+      .cat { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 10.5px; fill: #6E7781; }
+      .ttl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 600; fill: #1F2328; }
+      .dsc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 11.5px; fill: #59636E; }
+      .out { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 10.5px; fill: #24292F; }
+      .conn { stroke: #D0D7DE; stroke-width: 1.25; fill: none; }
+      .arr { fill: none; stroke: #59636E; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="1199" height="223" rx="10" fill="#FFFFFF" stroke="#D0D7DE" />
+  <text x="32" y="30" class="sans" font-size="13" font-weight="600" fill="#1F2328">Analytics &amp; Automation Operating Pipeline</text>
+  <text x="1168" y="30" text-anchor="end" class="mono" font-size="11" fill="#59636E">Contract before dashboard  ·  Evidence over assumption</text>
+  <line x1="1" y1="48" x2="1199" y2="48" stroke="#D8DEE4" stroke-width="1" />
+
+  <!-- Connectors -->
+  <line x1="236" y1="135" x2="262" y2="135" class="conn" />
+  <path d="M 257 131 L 262 135 L 257 139" class="arr" />
+
+  <line x1="469" y1="135" x2="495" y2="135" class="conn" />
+  <path d="M 490 131 L 495 135 L 490 139" class="arr" />
+
+  <line x1="702" y1="135" x2="728" y2="135" class="conn" />
+  <path d="M 723 131 L 728 135 L 723 139" class="arr" />
+
+  <line x1="935" y1="135" x2="961" y2="135" class="conn" />
+  <path d="M 956 131 L 961 135 L 956 139" class="arr" />
+
+  <!-- Stage 01 -->
+  <g transform="translate(32, 68)">
+    <rect width="204" height="134" rx="8" class="card" />
+    <text x="16" y="24" class="idx">01</text>
+    <text x="38" y="24" class="cat">FRAMING</text>
+    <text x="16" y="48" class="ttl">Business &amp; 3-Trees</text>
+    <text x="16" y="69" class="dsc">Lock owner, decision scope,</text>
+    <text x="16" y="86" class="dsc">KPI, Metric &amp; Logic Trees</text>
+    <line x1="16" y1="102" x2="188" y2="102" stroke="#D8DEE4" />
+    <text x="16" y="120" class="out">Spec &amp; owner sign-off</text>
+  </g>
+
+  <!-- Stage 02 -->
+  <g transform="translate(265, 68)">
+    <rect width="204" height="134" rx="8" class="card" />
+    <text x="16" y="24" class="idx">02</text>
+    <text x="38" y="24" class="cat">CONTRACT</text>
+    <text x="16" y="48" class="ttl">Data Contract</text>
+    <text x="16" y="69" class="dsc">Lock grain, keys, attribution</text>
+    <text x="16" y="86" class="dsc">&amp; field-level dictionary</text>
+    <line x1="16" y1="102" x2="188" y2="102" stroke="#D8DEE4" />
+    <text x="16" y="120" class="out">Zero fan-out schema</text>
+  </g>
+
+  <!-- Stage 03 -->
+  <g transform="translate(498, 68)">
+    <rect width="204" height="134" rx="8" class="card" />
+    <text x="16" y="24" class="idx">03</text>
+    <text x="38" y="24" class="cat">PIPELINE</text>
+    <text x="16" y="48" class="ttl">ETL &amp; API Ingestion</text>
+    <text x="16" y="69" class="dsc">Meta Ads, Haravan &amp; AMIS</text>
+    <text x="16" y="86" class="dsc">via n8n, Python &amp; SQL</text>
+    <line x1="16" y1="102" x2="188" y2="102" stroke="#D8DEE4" />
+    <text x="16" y="120" class="out">Clean staging tables</text>
+  </g>
+
+  <!-- Stage 04 -->
+  <g transform="translate(731, 68)">
+    <rect width="204" height="134" rx="8" class="card" />
+    <text x="16" y="24" class="idx">04</text>
+    <text x="38" y="24" class="cat">ANALYSIS</text>
+    <text x="16" y="48" class="ttl">EDA &amp; Power BI</text>
+    <text x="16" y="69" class="dsc">Descriptive/diagnostic EDA</text>
+    <text x="16" y="86" class="dsc">&amp; reconciled DAX models</text>
+    <line x1="16" y1="102" x2="188" y2="102" stroke="#D8DEE4" />
+    <text x="16" y="120" class="out">Audited BI evidence</text>
+  </g>
+
+  <!-- Stage 05 -->
+  <g transform="translate(964, 68)">
+    <rect width="204" height="134" rx="8" class="card-final" />
+    <text x="16" y="24" class="idx">05</text>
+    <text x="38" y="24" class="cat">DELIVERY</text>
+    <text x="16" y="48" class="ttl">Ops &amp; Web Portals</text>
+    <text x="16" y="69" class="dsc">Lark Base HRM/Ops portals</text>
+    <text x="16" y="86" class="dsc">&amp; TypeScript web tools</text>
+    <line x1="16" y1="102" x2="188" y2="102" stroke="#D8DEE4" />
+    <text x="16" y="120" class="out" fill="#1A7F37">Repeatable workflow</text>
+  </g>
+</svg>

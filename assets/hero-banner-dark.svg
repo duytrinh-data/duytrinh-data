@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 196" width="100%" role="img" aria-label="Trịnh Đình Duy — Business Automation &amp; Marketing Analytics">
+  <defs>
+    <pattern id="gridDark" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#161B22" stroke-width="1" />
+    </pattern>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
+      .pill { fill: #161B22; stroke: #30363D; stroke-width: 1; }
+      .pill-txt { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 11.5px; fill: #C9D1D9; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="1199" height="195" rx="10" fill="#0D1117" stroke="#21262D" />
+  <rect x="1" y="1" width="1198" height="194" rx="10" fill="url(#gridDark)" opacity="0.65" />
+  <line x1="36" y1="1" x2="240" y2="1" stroke="#3FB950" stroke-width="2" />
+
+  <!-- Left: Identity & Positioning -->
+  <text x="40" y="42" class="mono" font-size="11.5" fill="#8B949E">HCMIU · B.Sc. Data Science (Year 3)   /   Ho Chi Minh City, Vietnam</text>
+
+  <text x="40" y="82" class="sans" font-size="30" font-weight="700" fill="#F0F6FC" letter-spacing="-0.5">Trịnh Đình Duy</text>
+  <text x="276" y="81" class="mono" font-size="13.5" fill="#6E7681">@duytrinh-data</text>
+
+  <text x="40" y="112" class="sans" font-size="14.5" fill="#8B949E">Business Automation &amp; Marketing Analytics — connecting domain rules, Data Contracts, and verified BI.</text>
+
+  <!-- Cohesive Monochrome Stack Pills -->
+  <g transform="translate(0, 136)">
+    <rect x="40" y="0" width="112" height="28" rx="6" class="pill" />
+    <text x="96" y="18" class="pill-txt">Python · SQL</text>
+
+    <rect x="162" y="0" width="128" height="28" rx="6" class="pill" />
+    <text x="226" y="18" class="pill-txt">Power BI · DAX</text>
+
+    <rect x="300" y="0" width="126" height="28" rx="6" class="pill" />
+    <text x="363" y="18" class="pill-txt">n8n · REST API</text>
+
+    <rect x="436" y="0" width="102" height="28" rx="6" class="pill" />
+    <text x="487" y="18" class="pill-txt">Lark Base</text>
+
+    <rect x="548" y="0" width="150" height="28" rx="6" class="pill" />
+    <text x="623" y="18" class="pill-txt">TypeScript · React</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="810" y1="28" x2="810" y2="168" stroke="#21262D" stroke-width="1" />
+
+  <!-- Right: Telemetry / Spec Card -->
+  <circle cx="846" cy="43" r="4" fill="#3FB950" />
+  <text x="858" y="47" class="sans" font-size="13.5" font-weight="600" fill="#E6EDF3">Intern @ Hebekery</text>
+  <text x="858" y="66" class="sans" font-size="12" fill="#8B949E">Business Automation &amp; Data Analytics</text>
+
+  <line x1="842" y1="84" x2="1160" y2="84" stroke="#21262D" stroke-width="1" />
+
+  <text x="842" y="108" class="mono" font-size="11" fill="#6E7681">FLOW</text>
+  <text x="910" y="108" class="mono" font-size="11.5" fill="#C9D1D9">Contract -&gt; Staging -&gt; EDA -&gt; BI</text>
+
+  <text x="842" y="132" class="mono" font-size="11" fill="#6E7681">DOMAIN</text>
+  <text x="910" y="132" class="mono" font-size="11.5" fill="#C9D1D9">Meta Ads · Haravan · MISA AMIS</text>
+
+  <text x="842" y="156" class="mono" font-size="11" fill="#6E7681">CONTACT</text>
+  <text x="910" y="156" class="mono" font-size="11.5" fill="#3FB950">trinhdinhduy1206@gmail.com</text>
+</svg>
