@@ -99,7 +99,7 @@ I focus on turning messy operational and marketing datasets into reliable system
       <p>
         <img src="https://img.shields.io/badge/-Python-0f172a?style=flat-square&logo=python&logoColor=38bdf8" alt="Python" />
         <img src="https://img.shields.io/badge/-SQL%20%2F%20T--SQL-0f172a?style=flat-square&logo=postgresql&logoColor=60a5fa" alt="SQL" />
-        <img src="https://img.shields.io/badge/BI-Power%20BI%20%26%20DAX-0f172a?style=flat-square&labelColor=d97706" alt="Power BI & DAX" />
+        <img src="./assets/badges/powerbi.svg" alt="Power BI &amp; DAX" />
         <img src="https://img.shields.io/badge/-Pandas%20%2F%20NumPy-0f172a?style=flat-square&logo=pandas&logoColor=818cf8" alt="Pandas" />
         <img src="https://img.shields.io/badge/-Jupyter-0f172a?style=flat-square&logo=jupyter&logoColor=fb923c" alt="Jupyter" />
       </p>
@@ -108,11 +108,11 @@ I focus on turning messy operational and marketing datasets into reliable system
     <td width="33%" valign="top">
       <h4>Automation &amp; Ops</h4>
       <p>
-        <img src="https://img.shields.io/badge/-n8n-0f172a?style=flat-square&logo=n8n&logoColor=f43f5e" alt="n8n" />
-        <img src="https://img.shields.io/badge/Ops-Lark%20Base%20API-0f172a?style=flat-square&labelColor=0d9488" alt="Lark Base API" />
+        <img src="./assets/badges/n8n.svg" alt="n8n" />
+        <img src="./assets/badges/lark-base.svg" alt="Lark Base API" />
         <img src="https://img.shields.io/badge/-Meta%20Ads%20API-0f172a?style=flat-square&logo=meta&logoColor=3b82f6" alt="Meta Ads API" />
-        <img src="https://img.shields.io/badge/ERP-MISA%20AMIS-0f172a?style=flat-square&labelColor=2563eb" alt="MISA AMIS" />
-        <img src="https://img.shields.io/badge/AI-MCP%20%26%20Agents-0f172a?style=flat-square&labelColor=059669" alt="MCP & Agents" />
+        <img src="./assets/badges/misa-amis.svg" alt="MISA AMIS" />
+        <img src="https://img.shields.io/badge/-MCP%20%26%20Agents-0f172a?style=flat-square&logo=modelcontextprotocol&logoColor=34d399" alt="MCP &amp; Agents" />
       </p>
       <sub>Scheduled API ingestion, HRM &amp; payroll relational schema design, lookup/formula automation.</sub>
     </td>
@@ -122,7 +122,7 @@ I focus on turning messy operational and marketing datasets into reliable system
         <img src="https://img.shields.io/badge/-TypeScript-0f172a?style=flat-square&logo=typescript&logoColor=38bdf8" alt="TypeScript" />
         <img src="https://img.shields.io/badge/-React-0f172a?style=flat-square&logo=react&logoColor=61dafb" alt="React" />
         <img src="https://img.shields.io/badge/-Three.js-0f172a?style=flat-square&logo=threedotjs&logoColor=e2e8f0" alt="Three.js" />
-        <img src="https://img.shields.io/badge/OOP-Java%20%26%20DSA-0f172a?style=flat-square&labelColor=ea580c" alt="Java" />
+        <img src="https://img.shields.io/badge/-Java%20%26%20DSA-0f172a?style=flat-square&logo=openjdk&logoColor=fb923c" alt="Java &amp; DSA" />
         <img src="https://img.shields.io/badge/-Git-0f172a?style=flat-square&logo=git&logoColor=f97316" alt="Git" />
       </p>
       <sub>Internal operational web portals, real-time 3D web apps, and Data Science coursework at HCMIU.</sub>

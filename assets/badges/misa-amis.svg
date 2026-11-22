@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="20" role="img" aria-label="MISA AMIS">
+  <title>MISA AMIS</title>
+  <rect width="90" height="20" fill="#0f172a" />
+  <g transform="translate(5, 3)">
+    <rect x="0.5" y="0.5" width="13" height="13" rx="3" fill="#2563EB" fill-opacity="0.22" stroke="#38BDF8" stroke-width="1" />
+    <path d="M 3.2 10.5 V 3.8 L 7 7.6 L 10.8 3.8 V 10.5" fill="none" stroke="#38BDF8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <text x="24" y="14" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="11">MISA AMIS</text>
+</svg>

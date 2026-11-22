@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="20" role="img" aria-label="Power BI &amp; DAX">
+  <title>Power BI &amp; DAX</title>
+  <defs>
+    <linearGradient id="pbi1" x1="62.224" x2="118.486" y1="0" y2="119.258" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e6ad10" />
+      <stop offset="1" stop-color="#c87e0e" />
+    </linearGradient>
+    <linearGradient id="pbi2" x1="42.666" x2="89.981" y1="32" y2="123.766" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6d751" />
+      <stop offset="1" stop-color="#e6ad10" />
+    </linearGradient>
+    <linearGradient id="pbi3" x1="15.997" x2="42.144" y1="64" y2="125.968" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9e589" />
+      <stop offset="1" stop-color="#f6d751" />
+    </linearGradient>
+  </defs>
+  <rect width="122" height="20" fill="#0f172a" />
+  <g transform="translate(5, 3) scale(0.109375)">
+    <path fill="url(#pbi1)" d="M112 5.334v117.328a5.335 5.335 0 0 1-5.334 5.335H69.334V5.334A5.334 5.334 0 0 1 74.666 0h32A5.335 5.335 0 0 1 112 5.334" />
+    <path fill="url(#pbi2)" d="M80 32a5.337 5.337 0 0 1 5.334 5.334v90.663H42.67V37.33A5.33 5.33 0 0 1 48 32z" />
+    <path fill="url(#pbi3)" d="M53.334 64a5.334 5.334 0 0 1 5.335 5.331v58.666H21.334A5.335 5.335 0 0 1 16 122.662v-53.33A5.334 5.334 0 0 1 21.334 64z" />
+  </g>
+  <text x="24" y="14" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" text-rendering="geometricPrecision" font-size="11">Power BI &amp; DAX</text>
+</svg>
