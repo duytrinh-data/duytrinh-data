@@ -1,62 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 196" width="100%" role="img" aria-label="Trịnh Đình Duy — Business Automation &amp; Marketing Analytics">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 216" width="864" height="216" text-rendering="geometricPrecision" role="img" aria-label="Trịnh Đình Duy — Business Automation and Marketing Analytics">
   <defs>
-    <pattern id="gridDark" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#161B22" stroke-width="1" />
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="55%" stop-color="#0D1321" />
+      <stop offset="100%" stop-color="#0B111E" />
+    </linearGradient>
+    <radialGradient id="glowEmerald" cx="14%" cy="16%" r="55%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="glowSky" cx="88%" cy="88%" r="55%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="topAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <pattern id="dotGridDark" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="0.85" fill="#334155" opacity="0.45" />
     </pattern>
+    <clipPath id="heroClip">
+      <rect x="0.5" y="0.5" width="863" height="215" rx="12" />
+    </clipPath>
     <style>
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
       .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
-      .pill { fill: #161B22; stroke: #30363D; stroke-width: 1; }
-      .pill-txt { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 11.5px; fill: #C9D1D9; text-anchor: middle; }
+      .pill { fill: #111827; stroke: #1E293B; stroke-width: 1; }
+      .pill-txt { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; fill: #E2E8F0; }
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.35; }
+      }
+      @keyframes blinkCursor {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .live-dot { animation: pulseDot 2.4s ease-in-out infinite; }
+      .cursor { animation: blinkCursor 1.1s step-end infinite; }
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1199" height="195" rx="10" fill="#0D1117" stroke="#21262D" />
-  <rect x="1" y="1" width="1198" height="194" rx="10" fill="url(#gridDark)" opacity="0.65" />
-  <line x1="36" y1="1" x2="240" y2="1" stroke="#3FB950" stroke-width="2" />
+  <g clip-path="url(#heroClip)">
+    <rect x="0" y="0" width="864" height="216" fill="url(#bgDark)" />
+    <rect x="0" y="0" width="864" height="216" fill="url(#dotGridDark)" />
+    <rect x="0" y="0" width="864" height="216" fill="url(#glowEmerald)" />
+    <rect x="0" y="0" width="864" height="216" fill="url(#glowSky)" />
+    <rect x="0" y="0" width="864" height="2.5" fill="url(#topAccent)" />
+  </g>
+  <rect x="0.5" y="0.5" width="863" height="215" rx="12" fill="none" stroke="#1E293B" stroke-width="1" />
 
-  <!-- Left: Identity & Positioning -->
-  <text x="40" y="42" class="mono" font-size="11.5" fill="#8B949E">HCMIU · B.Sc. Data Science (Year 3)   /   Ho Chi Minh City, Vietnam</text>
+  <!-- Left Column: Identity -->
+  <g transform="translate(28, 24)">
+    <!-- Status Chip -->
+    <rect x="0" y="0" width="322" height="24" rx="12" fill="#10B981" fill-opacity="0.1" stroke="#10B981" stroke-opacity="0.32" stroke-width="1" />
+    <circle cx="14" cy="12" r="3.5" fill="#34D399" class="live-dot" />
+    <text x="25" y="15.5" class="mono" font-size="10.5" fill="#A7F3D0">HCMIU · Data Science (Year 3) · Ho Chi Minh City</text>
 
-  <text x="40" y="82" class="sans" font-size="30" font-weight="700" fill="#F0F6FC" letter-spacing="-0.5">Trịnh Đình Duy</text>
-  <text x="276" y="81" class="mono" font-size="13.5" fill="#6E7681">@duytrinh-data</text>
+    <!-- Name + Handle -->
+    <text x="0" y="64" class="sans" font-size="30" font-weight="700" fill="#F8FAFC" letter-spacing="-0.6">Trịnh Đình Duy</text>
+    <text x="232" y="62" class="mono" font-size="13" fill="#38BDF8">@duytrinh-data</text>
 
-  <text x="40" y="112" class="sans" font-size="14.5" fill="#8B949E">Business Automation &amp; Marketing Analytics — connecting domain rules, Data Contracts, and verified BI.</text>
+    <!-- Positioning -->
+    <text x="0" y="92" class="sans" font-size="13.5" font-weight="500" fill="#E2E8F0">Business Automation &amp; Marketing Analytics Intern @ Hebekery</text>
+    <text x="0" y="113" class="sans" font-size="12.5" fill="#94A3B8">Turning raw ad &amp; ERP data into Data Contracts, verified BI models, and n8n pipelines.</text>
 
-  <!-- Cohesive Monochrome Stack Pills -->
-  <g transform="translate(0, 136)">
-    <rect x="40" y="0" width="112" height="28" rx="6" class="pill" />
-    <text x="96" y="18" class="pill-txt">Python · SQL</text>
+    <!-- 4 Domain Accent Pills -->
+    <g transform="translate(0, 134)">
+      <rect x="0" y="0" width="114" height="28" rx="6" class="pill" />
+      <circle cx="13" cy="14" r="3" fill="#38BDF8" />
+      <text x="23" y="18" class="pill-txt">Python · SQL</text>
 
-    <rect x="162" y="0" width="128" height="28" rx="6" class="pill" />
-    <text x="226" y="18" class="pill-txt">Power BI · DAX</text>
+      <rect x="122" y="0" width="132" height="28" rx="6" class="pill" />
+      <circle cx="135" cy="14" r="3" fill="#F59E0B" />
+      <text x="145" y="18" class="pill-txt">Power BI · DAX</text>
 
-    <rect x="300" y="0" width="126" height="28" rx="6" class="pill" />
-    <text x="363" y="18" class="pill-txt">n8n · REST API</text>
+      <rect x="262" y="0" width="122" height="28" rx="6" class="pill" />
+      <circle cx="275" cy="14" r="3" fill="#F43F5E" />
+      <text x="285" y="18" class="pill-txt">n8n · REST API</text>
 
-    <rect x="436" y="0" width="102" height="28" rx="6" class="pill" />
-    <text x="487" y="18" class="pill-txt">Lark Base</text>
-
-    <rect x="548" y="0" width="150" height="28" rx="6" class="pill" />
-    <text x="623" y="18" class="pill-txt">TypeScript · React</text>
+      <rect x="392" y="0" width="126" height="28" rx="6" class="pill" />
+      <circle cx="405" cy="14" r="3" fill="#34D399" />
+      <text x="415" y="18" class="pill-txt">Lark · React</text>
+    </g>
   </g>
 
-  <!-- Divider -->
-  <line x1="810" y1="28" x2="810" y2="168" stroke="#21262D" stroke-width="1" />
+  <!-- Right Column: Terminal Spec Card -->
+  <g transform="translate(568, 22)">
+    <rect x="0" y="0" width="270" height="172" rx="10" fill="#0B1120" fill-opacity="0.92" stroke="#1E293B" stroke-width="1" />
+    <!-- Terminal Top Bar -->
+    <path d="M 0 10 Q 0 0 10 0 L 260 0 Q 270 0 270 10 L 270 28 L 0 28 Z" fill="#111827" />
+    <line x1="0" y1="28" x2="270" y2="28" stroke="#1E293B" stroke-width="1" />
+    <circle cx="15" cy="14" r="3.5" fill="#475569" />
+    <circle cx="27" cy="14" r="3.5" fill="#475569" />
+    <circle cx="39" cy="14" r="3.5" fill="#475569" />
+    <text x="135" y="17.5" text-anchor="middle" class="mono" font-size="10.5" fill="#94A3B8">duy@ai-os ~</text>
 
-  <!-- Right: Telemetry / Spec Card -->
-  <circle cx="846" cy="43" r="4" fill="#3FB950" />
-  <text x="858" y="47" class="sans" font-size="13.5" font-weight="600" fill="#E6EDF3">Intern @ Hebekery</text>
-  <text x="858" y="66" class="sans" font-size="12" fill="#8B949E">Business Automation &amp; Data Analytics</text>
+    <!-- Terminal Lines -->
+    <text x="14" y="50" class="mono" font-size="10.5" fill="#64748B">$ focus</text>
+    <text x="14" y="66" class="mono" font-size="11" fill="#34D399">marketing_analytics + ops_etl</text>
 
-  <line x1="842" y1="84" x2="1160" y2="84" stroke="#21262D" stroke-width="1" />
+    <text x="14" y="88" class="mono" font-size="10.5" fill="#64748B">$ data_sources</text>
+    <text x="14" y="104" class="mono" font-size="11" fill="#38BDF8">meta_ads · haravan · misa_amis</text>
 
-  <text x="842" y="108" class="mono" font-size="11" fill="#6E7681">FLOW</text>
-  <text x="910" y="108" class="mono" font-size="11.5" fill="#C9D1D9">Contract -&gt; Staging -&gt; EDA -&gt; BI</text>
+    <text x="14" y="126" class="mono" font-size="10.5" fill="#64748B">$ workflow</text>
+    <text x="14" y="142" class="mono" font-size="11" fill="#C4B5FD">3-trees -&gt; contract -&gt; pbi/lark</text>
 
-  <text x="842" y="132" class="mono" font-size="11" fill="#6E7681">DOMAIN</text>
-  <text x="910" y="132" class="mono" font-size="11.5" fill="#C9D1D9">Meta Ads · Haravan · MISA AMIS</text>
-
-  <text x="842" y="156" class="mono" font-size="11" fill="#6E7681">CONTACT</text>
-  <text x="910" y="156" class="mono" font-size="11.5" fill="#3FB950">trinhdinhduy1206@gmail.com</text>
+    <text x="14" y="162" class="mono" font-size="10.5" fill="#94A3B8">$ mail  trinhdinhduy1206@gmail.com</text>
+    <rect x="242" y="152" width="6" height="12" rx="1" fill="#34D399" class="cursor" />
+  </g>
 </svg>
