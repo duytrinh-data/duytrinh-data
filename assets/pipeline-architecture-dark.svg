@@ -1,165 +1,190 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 252" width="864" height="252" text-rendering="geometricPrecision" role="img" aria-label="Analytics and Automation Operating Pipeline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 244" width="864" height="244" text-rendering="geometricPrecision" role="img" aria-label="Analytics and Automation Operating Pipeline">
   <defs>
-    <linearGradient id="pipeBgD" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090D16" />
-      <stop offset="100%" stop-color="#0E1525" />
-    </linearGradient>
-    <linearGradient id="railGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#A78BFA" />
-      <stop offset="100%" stop-color="#34D399" />
-    </linearGradient>
     <clipPath id="pipeClipD">
-      <rect x="0.5" y="0.5" width="863" height="251" rx="12" />
+      <rect x="0.5" y="0.5" width="863" height="243" rx="10" />
     </clipPath>
+    <linearGradient id="topRimD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.03" />
+      <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.10" />
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.28" />
+    </linearGradient>
+    <linearGradient id="pulseBeamD" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0" />
+      <stop offset="65%" stop-color="#34D399" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#A7F3D0" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="stage5WashD" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.065" />
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.015" />
+    </linearGradient>
     <style>
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
-      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
-      .card { fill: #111827; stroke: #1E293B; stroke-width: 1; }
-      .ttl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #F8FAFC; }
-      .dsc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #94A3B8; }
-      .out { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 500; text-anchor: middle; }
-      .conn { stroke: #334155; stroke-width: 1.4; fill: none; }
-      .arr { fill: none; stroke: #64748B; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-      @keyframes pulseFlow {
-        0% { opacity: 0; transform: translateX(0px); }
-        25% { opacity: 1; }
-        75% { opacity: 1; }
-        100% { opacity: 0; transform: translateX(15px); }
+      .d-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .d-mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+      .d-hdr { font-size: 13px; font-weight: 600; fill: #F4F4F5; letter-spacing: -0.2px; }
+      .d-sub { font-size: 10.5px; font-weight: 400; fill: #8E94A0; }
+      .d-ttl { font-size: 13px; font-weight: 600; fill: #F4F4F5; letter-spacing: -0.2px; }
+      .d-dsc { font-size: 11.5px; font-weight: 400; fill: #A1A1AA; }
+      .d-idx { font-size: 10.5px; font-weight: 600; fill: #D4D4D8; text-anchor: middle; }
+      .d-idx-live { font-size: 10.5px; font-weight: 600; fill: #34D399; text-anchor: middle; }
+      .d-gate { font-size: 10.5px; font-weight: 500; fill: #D4D4D8; }
+      .d-gate-live { font-size: 10.5px; font-weight: 600; fill: #34D399; }
+      .d-rule { stroke: #1E222A; stroke-width: 1; }
+      .d-rail { stroke: #2C313D; stroke-width: 1.25; fill: none; }
+      .d-rail-live { stroke: #34D399; stroke-opacity: 0.45; stroke-width: 1.25; fill: none; }
+      .d-node { fill: #0B0C0E; stroke: #2F3542; stroke-width: 1; }
+      .d-node-live { fill: #0D1B16; stroke: #34D399; stroke-opacity: 0.72; stroke-width: 1; }
+      .d-ico { fill: none; stroke: #7E8594; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+      .d-ico-live { fill: none; stroke: #34D399; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+      .d-chev { fill: none; stroke: #586070; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+      @keyframes flowSweepD {
+        0% { transform: translateX(0px); opacity: 0; }
+        7% { opacity: 1; }
+        86% { opacity: 1; }
+        95% { transform: translateX(772px); opacity: 0; }
+        100% { transform: translateX(772px); opacity: 0; }
       }
-      .sig1 { animation: pulseFlow 2.6s ease-in-out infinite 0s; }
-      .sig2 { animation: pulseFlow 2.6s ease-in-out infinite 0.45s; }
-      .sig3 { animation: pulseFlow 2.6s ease-in-out infinite 0.9s; }
-      .sig4 { animation: pulseFlow 2.6s ease-in-out infinite 1.35s; }
+      .d-beam { animation: flowSweepD 5.4s cubic-bezier(0.35, 0, 0.25, 1) infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .d-beam { animation: none; opacity: 0; }
+      }
     </style>
   </defs>
 
   <g clip-path="url(#pipeClipD)">
-    <rect x="0" y="0" width="864" height="252" fill="url(#pipeBgD)" />
-    <rect x="0" y="0" width="864" height="2" fill="url(#railGrad)" opacity="0.85" />
+    <!-- Neutral obsidian charcoal ground (zero muddy navy) -->
+    <rect x="0" y="0" width="864" height="244" fill="#0B0C0E" />
+    <!-- Surface-1 header bar -->
+    <rect x="0" y="0" width="864" height="44" fill="#121418" />
+    <!-- Surface-1 schematic conduit strip -->
+    <rect x="0" y="44" width="864" height="42" fill="#0F1115" />
+    <!-- Whisper-quiet single-signal wash exclusively on terminal delivery column -->
+    <rect x="691" y="44" width="173" height="200" fill="url(#stage5WashD)" />
+    <!-- Surface-1 gate deliverables strip -->
+    <rect x="0" y="200" width="864" height="44" fill="#0F1115" />
+    <!-- Specular top rim -->
+    <rect x="0" y="0" width="864" height="1" fill="url(#topRimD)" />
+
+    <!-- Horizontal architectural hairlines -->
+    <line x1="0" y1="44" x2="864" y2="44" class="d-rule" />
+    <line x1="0" y1="86" x2="864" y2="86" class="d-rule" />
+    <line x1="0" y1="200" x2="864" y2="200" class="d-rule" />
+
+    <!-- Exposed 1px vertical column dividers (5 equal tracks) -->
+    <line x1="173" y1="44" x2="173" y2="244" class="d-rule" />
+    <line x1="346" y1="44" x2="346" y2="244" class="d-rule" />
+    <line x1="519" y1="44" x2="519" y2="244" class="d-rule" />
+    <line x1="691" y1="44" x2="691" y2="244" class="d-rule" />
+
+    <!-- Header content -->
+    <text x="18" y="26.5" class="d-sans d-hdr">Analytics &amp; Automation Operating Pipeline</text>
+    <text x="846" y="26" text-anchor="end" class="d-mono d-sub">Contract before dashboard  /  Evidence over assumption</text>
+
+    <!-- Continuous schematic pipeline conduit across all 5 stages -->
+    <line x1="32" y1="65" x2="725" y2="65" class="d-rail" />
+    <line x1="737" y1="65" x2="836" y2="65" class="d-rail-live" />
+    <!-- Terminal live endpoint -->
+    <circle cx="841" cy="65" r="6" fill="#34D399" fill-opacity="0.14" />
+    <circle cx="841" cy="65" r="2.8" fill="#34D399" />
+
+    <!-- Single traveling emerald data-flow pulse -->
+    <rect x="32" y="63.75" width="38" height="2.5" rx="1.25" fill="url(#pulseBeamD)" class="d-beam" />
+
+    <!-- Directional chevrons at each stage handoff -->
+    <path d="M 163 61.5 L 167 65 L 163 68.5" class="d-chev" />
+    <path d="M 336 61.5 L 340 65 L 336 68.5" class="d-chev" />
+    <path d="M 509 61.5 L 513 65 L 509 68.5" class="d-chev" />
+    <path d="M 681 61.5 L 685 65 L 681 68.5" class="d-chev" />
+
+    <!-- Stage 01 -->
+    <g transform="translate(0, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="d-node" />
+      <text x="32" y="68.5" class="d-mono d-idx">01</text>
+
+      <text x="18" y="113" class="d-sans d-ttl">Business &amp; Trees</text>
+      <circle cx="150" cy="108.5" r="6" class="d-ico" />
+      <circle cx="150" cy="108.5" r="2" class="d-ico" />
+
+      <text x="18" y="137" class="d-sans d-dsc">Lock owner, scope,</text>
+      <text x="18" y="155" class="d-sans d-dsc">KPI, Metric &amp; Logic</text>
+      <text x="18" y="173" class="d-sans d-dsc">Trees framing</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#71717A" />
+      <text x="30" y="225.5" class="d-mono d-gate">Domain Framing</text>
+    </g>
+
+    <!-- Stage 02 -->
+    <g transform="translate(173, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="d-node" />
+      <text x="32" y="68.5" class="d-mono d-idx">02</text>
+
+      <text x="18" y="113" class="d-sans d-ttl">Data Contract</text>
+      <ellipse cx="150" cy="104.5" rx="5.5" ry="2.1" class="d-ico" />
+      <path d="M 144.5 104.5 V 112.5 C 144.5 113.7 147 114.6 150 114.6 C 153 114.6 155.5 113.7 155.5 112.5 V 104.5" class="d-ico" />
+      <path d="M 144.5 108.5 C 144.5 109.7 147 110.6 150 110.6 C 153 110.6 155.5 109.7 155.5 108.5" class="d-ico" />
+
+      <text x="18" y="137" class="d-sans d-dsc">Lock grain, keys,</text>
+      <text x="18" y="155" class="d-sans d-dsc">attribution &amp; field</text>
+      <text x="18" y="173" class="d-sans d-dsc">Data Dictionary</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#71717A" />
+      <text x="30" y="225.5" class="d-mono d-gate">Zero Fan-Out</text>
+    </g>
+
+    <!-- Stage 03 -->
+    <g transform="translate(346, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="d-node" />
+      <text x="32" y="68.5" class="d-mono d-idx">03</text>
+
+      <text x="18" y="113" class="d-sans d-ttl">ETL &amp; Ingestion</text>
+      <circle cx="145.5" cy="104.5" r="1.9" class="d-ico" />
+      <circle cx="154" cy="108.5" r="1.9" class="d-ico" />
+      <circle cx="145.5" cy="112.5" r="1.9" class="d-ico" />
+      <path d="M 147.3 105.3 L 152.2 107.7 M 147.3 111.7 L 152.2 109.3" class="d-ico" />
+
+      <text x="18" y="137" class="d-sans d-dsc">Meta Ads, Haravan,</text>
+      <text x="18" y="155" class="d-sans d-dsc">MISA AMIS via n8n,</text>
+      <text x="18" y="173" class="d-sans d-dsc">Python &amp; SQL</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#71717A" />
+      <text x="30" y="225.5" class="d-mono d-gate">Clean Staging</text>
+    </g>
+
+    <!-- Stage 04 -->
+    <g transform="translate(519, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="d-node" />
+      <text x="32" y="68.5" class="d-mono d-idx">04</text>
+
+      <text x="18" y="113" class="d-sans d-ttl">EDA &amp; Power BI</text>
+      <line x1="145" y1="114" x2="145" y2="109" class="d-ico" />
+      <line x1="149.5" y1="114" x2="149.5" y2="103.5" class="d-ico" />
+      <line x1="154" y1="114" x2="154" y2="106.5" class="d-ico" />
+
+      <text x="18" y="137" class="d-sans d-dsc">Descriptive &amp;</text>
+      <text x="18" y="155" class="d-sans d-dsc">Diagnostic EDA with</text>
+      <text x="18" y="173" class="d-sans d-dsc">reconciled DAX</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#71717A" />
+      <text x="30" y="225.5" class="d-mono d-gate">Verified BI</text>
+    </g>
+
+    <!-- Stage 05 (Single Focal Signal Accent) -->
+    <g transform="translate(691, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="d-node-live" />
+      <text x="32" y="68.5" class="d-mono d-idx-live">05</text>
+
+      <text x="18" y="113" class="d-sans d-ttl">Ops &amp; Web Apps</text>
+      <rect x="144" y="103" width="12.5" height="11" rx="2" class="d-ico-live" />
+      <path d="M 147 107 L 149.2 108.7 L 147 110.4 M 151.1 110.4 H 153.5" class="d-ico-live" />
+
+      <text x="18" y="137" class="d-sans d-dsc">Lark Base HRM/Ops</text>
+      <text x="18" y="155" class="d-sans d-dsc">portals &amp; React /</text>
+      <text x="18" y="173" class="d-sans d-dsc">TypeScript tools</text>
+
+      <circle cx="20.5" cy="222" r="3" fill="#34D399" />
+      <text x="30" y="225.5" class="d-mono d-gate-live">Live Ops Handoff</text>
+    </g>
   </g>
-  <rect x="0.5" y="0.5" width="863" height="251" rx="12" fill="none" stroke="#1E293B" stroke-width="1" />
 
-  <!-- Header -->
-  <text x="24" y="30" class="sans" font-size="13.5" font-weight="600" fill="#F1F5F9">Analytics &amp; Automation Operating Pipeline</text>
-  <text x="840" y="30" text-anchor="end" class="mono" font-size="10.5" fill="#94A3B8">Contract before dashboard · Evidence over assumption</text>
-  <line x1="1" y1="46" x2="863" y2="46" stroke="#1E293B" stroke-width="1" />
-
-  <!-- Connectors with animated signal pulses -->
-  <g>
-    <line x1="172" y1="146" x2="189" y2="146" class="conn" />
-    <path d="M 185 142 L 189 146 L 185 150" class="arr" />
-    <circle cx="173" cy="146" r="2.2" fill="#38BDF8" class="sig1" />
-
-    <line x1="339" y1="146" x2="356" y2="146" class="conn" />
-    <path d="M 352 142 L 356 146 L 352 150" class="arr" />
-    <circle cx="340" cy="146" r="2.2" fill="#818CF8" class="sig2" />
-
-    <line x1="506" y1="146" x2="523" y2="146" class="conn" />
-    <path d="M 519 142 L 523 146 L 519 150" class="arr" />
-    <circle cx="507" cy="146" r="2.2" fill="#A78BFA" class="sig3" />
-
-    <line x1="673" y1="146" x2="690" y2="146" class="conn" />
-    <path d="M 686 142 L 690 146 L 686 150" class="arr" />
-    <circle cx="674" cy="146" r="2.2" fill="#2DD4BF" class="sig4" />
-  </g>
-
-  <!-- Stage 01: Sky #38BDF8 -->
-  <g transform="translate(24, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#38BDF8" opacity="0.9" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-opacity="0.3" />
-    <!-- Target / Framing icon -->
-    <circle cx="26" cy="28" r="7" fill="none" stroke="#38BDF8" stroke-width="1.4" />
-    <circle cx="26" cy="28" r="2.5" fill="none" stroke="#38BDF8" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#38BDF8">01</text>
-
-    <text x="12" y="62" class="ttl">Business &amp; Trees</text>
-    <text x="12" y="81" class="dsc">Lock owner &amp; scope,</text>
-    <text x="12" y="96" class="dsc">KPI, Metric &amp; Logic</text>
-    <text x="12" y="111" class="dsc">Trees framing</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.25" />
-    <text x="74" y="143" class="out" fill="#7DD3FC">Domain Framing</text>
-  </g>
-
-  <!-- Stage 02: Indigo #818CF8 -->
-  <g transform="translate(191, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#818CF8" opacity="0.9" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#818CF8" fill-opacity="0.12" stroke="#818CF8" stroke-opacity="0.3" />
-    <!-- Database / Contract layers icon -->
-    <ellipse cx="26" cy="23.5" rx="6.5" ry="2.6" fill="none" stroke="#818CF8" stroke-width="1.4" />
-    <path d="M 19.5 23.5 V 32.5 C 19.5 34 22.4 35.1 26 35.1 C 29.6 35.1 32.5 34 32.5 32.5 V 23.5" fill="none" stroke="#818CF8" stroke-width="1.4" />
-    <path d="M 19.5 28 C 19.5 29.5 22.4 30.6 26 30.6 C 29.6 30.6 32.5 29.5 32.5 28" fill="none" stroke="#818CF8" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#818CF8">02</text>
-
-    <text x="12" y="62" class="ttl">Data Contract</text>
-    <text x="12" y="81" class="dsc">Lock grain, keys,</text>
-    <text x="12" y="96" class="dsc">attribution &amp; field</text>
-    <text x="12" y="111" class="dsc">Data Dictionary</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#818CF8" fill-opacity="0.1" stroke="#818CF8" stroke-opacity="0.25" />
-    <text x="74" y="143" class="out" fill="#A5B4FC">Zero Fan-Out</text>
-  </g>
-
-  <!-- Stage 03: Violet #A78BFA -->
-  <g transform="translate(358, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#A78BFA" opacity="0.9" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#A78BFA" fill-opacity="0.12" stroke="#A78BFA" stroke-opacity="0.3" />
-    <!-- Workflow / Pipeline nodes icon -->
-    <circle cx="21" cy="23" r="2.2" fill="none" stroke="#A78BFA" stroke-width="1.4" />
-    <circle cx="31" cy="28" r="2.2" fill="none" stroke="#A78BFA" stroke-width="1.4" />
-    <circle cx="21" cy="33" r="2.2" fill="none" stroke="#A78BFA" stroke-width="1.4" />
-    <path d="M 23.2 23.8 L 28.8 27.1 M 23.2 32.2 L 28.8 28.9" stroke="#A78BFA" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#A78BFA">03</text>
-
-    <text x="12" y="62" class="ttl">ETL &amp; Ingestion</text>
-    <text x="12" y="81" class="dsc">Meta Ads, Haravan,</text>
-    <text x="12" y="96" class="dsc">MISA AMIS via n8n,</text>
-    <text x="12" y="111" class="dsc">Python &amp; SQL</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#A78BFA" fill-opacity="0.1" stroke="#A78BFA" stroke-opacity="0.25" />
-    <text x="74" y="143" class="out" fill="#DDD6FE">Clean Staging</text>
-  </g>
-
-  <!-- Stage 04: Teal #2DD4BF -->
-  <g transform="translate(525, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#2DD4BF" opacity="0.9" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#2DD4BF" fill-opacity="0.12" stroke="#2DD4BF" stroke-opacity="0.3" />
-    <!-- BarChart / Analytics icon -->
-    <line x1="21" y1="34" x2="21" y2="28" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" />
-    <line x1="26" y1="34" x2="26" y2="22" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" />
-    <line x1="31" y1="34" x2="31" y2="25.5" stroke="#2DD4BF" stroke-width="1.8" stroke-linecap="round" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#2DD4BF">04</text>
-
-    <text x="12" y="62" class="ttl">EDA &amp; Power BI</text>
-    <text x="12" y="81" class="dsc">Descriptive &amp; strat.</text>
-    <text x="12" y="96" class="dsc">Diagnostic EDA with</text>
-    <text x="12" y="111" class="dsc">reconciled DAX</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#2DD4BF" fill-opacity="0.1" stroke="#2DD4BF" stroke-opacity="0.25" />
-    <text x="74" y="143" class="out" fill="#99F6E4">Verified BI</text>
-  </g>
-
-  <!-- Stage 05: Emerald #34D399 -->
-  <g transform="translate(692, 64)">
-    <rect width="148" height="164" rx="9" fill="#111827" stroke="#10B981" stroke-opacity="0.45" stroke-width="1" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#34D399" opacity="0.95" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#34D399" fill-opacity="0.14" stroke="#34D399" stroke-opacity="0.35" />
-    <!-- Terminal / App icon -->
-    <rect x="19" y="22" width="14" height="12" rx="2" fill="none" stroke="#34D399" stroke-width="1.4" />
-    <path d="M 22.5 26.5 L 25 28.5 L 22.5 30.5 M 27 30.5 H 30" fill="none" stroke="#34D399" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#34D399">05</text>
-
-    <text x="12" y="62" class="ttl">Ops &amp; Web Apps</text>
-    <text x="12" y="81" class="dsc">Lark Base HRM/Ops</text>
-    <text x="12" y="96" class="dsc">portals &amp; React /</text>
-    <text x="12" y="111" class="dsc">TypeScript tools</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.35" />
-    <text x="74" y="143" class="out" fill="#6EE7B7">Live Ops Handoff</text>
-  </g>
+  <!-- Crisp outer architectural border -->
+  <rect x="0.5" y="0.5" width="863" height="243" rx="10" fill="none" stroke="#262A33" stroke-width="1" />
 </svg>

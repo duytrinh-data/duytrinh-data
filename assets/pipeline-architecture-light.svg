@@ -1,158 +1,183 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 252" width="864" height="252" text-rendering="geometricPrecision" role="img" aria-label="Analytics and Automation Operating Pipeline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 244" width="864" height="244" text-rendering="geometricPrecision" role="img" aria-label="Analytics and Automation Operating Pipeline">
   <defs>
-    <linearGradient id="pipeBgL" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#F8FAFC" />
-    </linearGradient>
-    <linearGradient id="railGradL" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0284C7" />
-      <stop offset="50%" stop-color="#7C3AED" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
     <clipPath id="pipeClipL">
-      <rect x="0.5" y="0.5" width="863" height="251" rx="12" />
+      <rect x="0.5" y="0.5" width="863" height="243" rx="10" />
     </clipPath>
+    <linearGradient id="pulseBeamL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0" />
+      <stop offset="65%" stop-color="#059669" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#047857" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="stage5WashL" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.055" />
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.01" />
+    </linearGradient>
     <style>
-      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
-      .mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; }
-      .card { fill: #FFFFFF; stroke: #E2E8F0; stroke-width: 1; }
-      .ttl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #0F172A; }
-      .dsc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 400; fill: #475569; }
-      .out { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-size: 10px; font-weight: 500; text-anchor: middle; }
-      .conn { stroke: #CBD5E1; stroke-width: 1.4; fill: none; }
-      .arr { fill: none; stroke: #64748B; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-      @keyframes pulseFlow {
-        0% { opacity: 0; transform: translateX(0px); }
-        25% { opacity: 1; }
-        75% { opacity: 1; }
-        100% { opacity: 0; transform: translateX(15px); }
+      .l-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+      .l-mono { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+      .l-hdr { font-size: 13px; font-weight: 600; fill: #111318; letter-spacing: -0.2px; }
+      .l-sub { font-size: 10.5px; font-weight: 400; fill: #5F6775; }
+      .l-ttl { font-size: 13px; font-weight: 600; fill: #111318; letter-spacing: -0.2px; }
+      .l-dsc { font-size: 11.5px; font-weight: 400; fill: #4B525E; }
+      .l-idx { font-size: 10.5px; font-weight: 600; fill: #374151; text-anchor: middle; }
+      .l-idx-live { font-size: 10.5px; font-weight: 600; fill: #047857; text-anchor: middle; }
+      .l-gate { font-size: 10.5px; font-weight: 500; fill: #374151; }
+      .l-gate-live { font-size: 10.5px; font-weight: 600; fill: #047857; }
+      .l-rule { stroke: #E5E7EB; stroke-width: 1; }
+      .l-rail { stroke: #CBD2DC; stroke-width: 1.25; fill: none; }
+      .l-rail-live { stroke: #059669; stroke-opacity: 0.45; stroke-width: 1.25; fill: none; }
+      .l-node { fill: #FFFFFF; stroke: #CBD2DC; stroke-width: 1; }
+      .l-node-live { fill: #ECFDF5; stroke: #059669; stroke-opacity: 0.65; stroke-width: 1; }
+      .l-ico { fill: none; stroke: #64748B; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+      .l-ico-live { fill: none; stroke: #059669; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+      .l-chev { fill: none; stroke: #9CA3AF; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
+      @keyframes flowSweepL {
+        0% { transform: translateX(0px); opacity: 0; }
+        7% { opacity: 1; }
+        86% { opacity: 1; }
+        95% { transform: translateX(772px); opacity: 0; }
+        100% { transform: translateX(772px); opacity: 0; }
       }
-      .sig1 { animation: pulseFlow 2.6s ease-in-out infinite 0s; }
-      .sig2 { animation: pulseFlow 2.6s ease-in-out infinite 0.45s; }
-      .sig3 { animation: pulseFlow 2.6s ease-in-out infinite 0.9s; }
-      .sig4 { animation: pulseFlow 2.6s ease-in-out infinite 1.35s; }
+      .l-beam { animation: flowSweepL 5.4s cubic-bezier(0.35, 0, 0.25, 1) infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .l-beam { animation: none; opacity: 0; }
+      }
     </style>
   </defs>
 
   <g clip-path="url(#pipeClipL)">
-    <rect x="0" y="0" width="864" height="252" fill="url(#pipeBgL)" />
-    <rect x="0" y="0" width="864" height="2" fill="url(#railGradL)" opacity="0.85" />
+    <!-- Pure neutral light ground -->
+    <rect x="0" y="0" width="864" height="244" fill="#FFFFFF" />
+    <!-- Surface-1 header bar -->
+    <rect x="0" y="0" width="864" height="44" fill="#F8F9FA" />
+    <!-- Surface-1 schematic conduit strip -->
+    <rect x="0" y="44" width="864" height="42" fill="#FAFBFD" />
+    <!-- Subtle single-signal wash exclusively on terminal delivery column -->
+    <rect x="691" y="44" width="173" height="200" fill="url(#stage5WashL)" />
+    <!-- Surface-1 gate deliverables strip -->
+    <rect x="0" y="200" width="864" height="44" fill="#FAFBFD" />
+
+    <!-- Horizontal architectural hairlines -->
+    <line x1="0" y1="44" x2="864" y2="44" class="l-rule" />
+    <line x1="0" y1="86" x2="864" y2="86" class="l-rule" />
+    <line x1="0" y1="200" x2="864" y2="200" class="l-rule" />
+
+    <!-- Exposed 1px vertical column dividers (5 equal tracks) -->
+    <line x1="173" y1="44" x2="173" y2="244" class="l-rule" />
+    <line x1="346" y1="44" x2="346" y2="244" class="l-rule" />
+    <line x1="519" y1="44" x2="519" y2="244" class="l-rule" />
+    <line x1="691" y1="44" x2="691" y2="244" class="l-rule" />
+
+    <!-- Header content -->
+    <text x="18" y="26.5" class="l-sans l-hdr">Analytics &amp; Automation Operating Pipeline</text>
+    <text x="846" y="26" text-anchor="end" class="l-mono l-sub">Contract before dashboard  /  Evidence over assumption</text>
+
+    <!-- Continuous schematic pipeline conduit across all 5 stages -->
+    <line x1="32" y1="65" x2="725" y2="65" class="l-rail" />
+    <line x1="737" y1="65" x2="836" y2="65" class="l-rail-live" />
+    <!-- Terminal live endpoint -->
+    <circle cx="841" cy="65" r="6" fill="#059669" fill-opacity="0.14" />
+    <circle cx="841" cy="65" r="2.8" fill="#059669" />
+
+    <!-- Single traveling emerald data-flow pulse -->
+    <rect x="32" y="63.75" width="38" height="2.5" rx="1.25" fill="url(#pulseBeamL)" class="l-beam" />
+
+    <!-- Directional chevrons at each stage handoff -->
+    <path d="M 163 61.5 L 167 65 L 163 68.5" class="l-chev" />
+    <path d="M 336 61.5 L 340 65 L 336 68.5" class="l-chev" />
+    <path d="M 509 61.5 L 513 65 L 509 68.5" class="l-chev" />
+    <path d="M 681 61.5 L 685 65 L 681 68.5" class="l-chev" />
+
+    <!-- Stage 01 -->
+    <g transform="translate(0, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="l-node" />
+      <text x="32" y="68.5" class="l-mono l-idx">01</text>
+
+      <text x="18" y="113" class="l-sans l-ttl">Business &amp; Trees</text>
+      <circle cx="150" cy="108.5" r="6" class="l-ico" />
+      <circle cx="150" cy="108.5" r="2" class="l-ico" />
+
+      <text x="18" y="137" class="l-sans l-dsc">Lock owner, scope,</text>
+      <text x="18" y="155" class="l-sans l-dsc">KPI, Metric &amp; Logic</text>
+      <text x="18" y="173" class="l-sans l-dsc">Trees framing</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#9CA3AF" />
+      <text x="30" y="225.5" class="l-mono l-gate">Domain Framing</text>
+    </g>
+
+    <!-- Stage 02 -->
+    <g transform="translate(173, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="l-node" />
+      <text x="32" y="68.5" class="l-mono l-idx">02</text>
+
+      <text x="18" y="113" class="l-sans l-ttl">Data Contract</text>
+      <ellipse cx="150" cy="104.5" rx="5.5" ry="2.1" class="l-ico" />
+      <path d="M 144.5 104.5 V 112.5 C 144.5 113.7 147 114.6 150 114.6 C 153 114.6 155.5 113.7 155.5 112.5 V 104.5" class="l-ico" />
+      <path d="M 144.5 108.5 C 144.5 109.7 147 110.6 150 110.6 C 153 110.6 155.5 109.7 155.5 108.5" class="l-ico" />
+
+      <text x="18" y="137" class="l-sans l-dsc">Lock grain, keys,</text>
+      <text x="18" y="155" class="l-sans l-dsc">attribution &amp; field</text>
+      <text x="18" y="173" class="l-sans l-dsc">Data Dictionary</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#9CA3AF" />
+      <text x="30" y="225.5" class="l-mono l-gate">Zero Fan-Out</text>
+    </g>
+
+    <!-- Stage 03 -->
+    <g transform="translate(346, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="l-node" />
+      <text x="32" y="68.5" class="l-mono l-idx">03</text>
+
+      <text x="18" y="113" class="l-sans l-ttl">ETL &amp; Ingestion</text>
+      <circle cx="145.5" cy="104.5" r="1.9" class="l-ico" />
+      <circle cx="154" cy="108.5" r="1.9" class="l-ico" />
+      <circle cx="145.5" cy="112.5" r="1.9" class="l-ico" />
+      <path d="M 147.3 105.3 L 152.2 107.7 M 147.3 111.7 L 152.2 109.3" class="l-ico" />
+
+      <text x="18" y="137" class="l-sans l-dsc">Meta Ads, Haravan,</text>
+      <text x="18" y="155" class="l-sans l-dsc">MISA AMIS via n8n,</text>
+      <text x="18" y="173" class="l-sans l-dsc">Python &amp; SQL</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#9CA3AF" />
+      <text x="30" y="225.5" class="l-mono l-gate">Clean Staging</text>
+    </g>
+
+    <!-- Stage 04 -->
+    <g transform="translate(519, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="l-node" />
+      <text x="32" y="68.5" class="l-mono l-idx">04</text>
+
+      <text x="18" y="113" class="l-sans l-ttl">EDA &amp; Power BI</text>
+      <line x1="145" y1="114" x2="145" y2="109" class="l-ico" />
+      <line x1="149.5" y1="114" x2="149.5" y2="103.5" class="l-ico" />
+      <line x1="154" y1="114" x2="154" y2="106.5" class="l-ico" />
+
+      <text x="18" y="137" class="l-sans l-dsc">Descriptive &amp;</text>
+      <text x="18" y="155" class="l-sans l-dsc">Diagnostic EDA with</text>
+      <text x="18" y="173" class="l-sans l-dsc">reconciled DAX</text>
+
+      <rect x="18" y="219.5" width="5" height="5" rx="1.2" fill="#9CA3AF" />
+      <text x="30" y="225.5" class="l-mono l-gate">Verified BI</text>
+    </g>
+
+    <!-- Stage 05 (Single Focal Signal Accent) -->
+    <g transform="translate(691, 0)">
+      <rect x="18" y="54" width="28" height="22" rx="5" class="l-node-live" />
+      <text x="32" y="68.5" class="l-mono l-idx-live">05</text>
+
+      <text x="18" y="113" class="l-sans l-ttl">Ops &amp; Web Apps</text>
+      <rect x="144" y="103" width="12.5" height="11" rx="2" class="l-ico-live" />
+      <path d="M 147 107 L 149.2 108.7 L 147 110.4 M 151.1 110.4 H 153.5" class="l-ico-live" />
+
+      <text x="18" y="137" class="l-sans l-dsc">Lark Base HRM/Ops</text>
+      <text x="18" y="155" class="l-sans l-dsc">portals &amp; React /</text>
+      <text x="18" y="173" class="l-sans l-dsc">TypeScript tools</text>
+
+      <circle cx="20.5" cy="222" r="3" fill="#059669" />
+      <text x="30" y="225.5" class="l-mono l-gate-live">Live Ops Handoff</text>
+    </g>
   </g>
-  <rect x="0.5" y="0.5" width="863" height="251" rx="12" fill="none" stroke="#CBD5E1" stroke-width="1" />
 
-  <text x="24" y="30" class="sans" font-size="13.5" font-weight="600" fill="#0F172A">Analytics &amp; Automation Operating Pipeline</text>
-  <text x="840" y="30" text-anchor="end" class="mono" font-size="10.5" fill="#475569">Contract before dashboard · Evidence over assumption</text>
-  <line x1="1" y1="46" x2="863" y2="46" stroke="#E2E8F0" stroke-width="1" />
-
-  <g>
-    <line x1="172" y1="146" x2="189" y2="146" class="conn" />
-    <path d="M 185 142 L 189 146 L 185 150" class="arr" />
-    <circle cx="173" cy="146" r="2.2" fill="#0284C7" class="sig1" />
-
-    <line x1="339" y1="146" x2="356" y2="146" class="conn" />
-    <path d="M 352 142 L 356 146 L 352 150" class="arr" />
-    <circle cx="340" cy="146" r="2.2" fill="#4F46E5" class="sig2" />
-
-    <line x1="506" y1="146" x2="523" y2="146" class="conn" />
-    <path d="M 519 142 L 523 146 L 519 150" class="arr" />
-    <circle cx="507" cy="146" r="2.2" fill="#7C3AED" class="sig3" />
-
-    <line x1="673" y1="146" x2="690" y2="146" class="conn" />
-    <path d="M 686 142 L 690 146 L 686 150" class="arr" />
-    <circle cx="674" cy="146" r="2.2" fill="#0D9488" class="sig4" />
-  </g>
-
-  <!-- Stage 01 -->
-  <g transform="translate(24, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#0284C7" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#E0F2FE" stroke="#BAE6FD" />
-    <circle cx="26" cy="28" r="7" fill="none" stroke="#0284C7" stroke-width="1.4" />
-    <circle cx="26" cy="28" r="2.5" fill="none" stroke="#0284C7" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#0284C7">01</text>
-
-    <text x="12" y="62" class="ttl">Business &amp; Trees</text>
-    <text x="12" y="81" class="dsc">Lock owner &amp; scope,</text>
-    <text x="12" y="96" class="dsc">KPI, Metric &amp; Logic</text>
-    <text x="12" y="111" class="dsc">Trees framing</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#F0F9FF" stroke="#BAE6FD" />
-    <text x="74" y="143" class="out" fill="#0369A1">Domain Framing</text>
-  </g>
-
-  <!-- Stage 02 -->
-  <g transform="translate(191, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#4F46E5" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#EEF2FF" stroke="#C7D2FE" />
-    <ellipse cx="26" cy="23.5" rx="6.5" ry="2.6" fill="none" stroke="#4F46E5" stroke-width="1.4" />
-    <path d="M 19.5 23.5 V 32.5 C 19.5 34 22.4 35.1 26 35.1 C 29.6 35.1 32.5 34 32.5 32.5 V 23.5" fill="none" stroke="#4F46E5" stroke-width="1.4" />
-    <path d="M 19.5 28 C 19.5 29.5 22.4 30.6 26 30.6 C 29.6 30.6 32.5 29.5 32.5 28" fill="none" stroke="#4F46E5" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#4F46E5">02</text>
-
-    <text x="12" y="62" class="ttl">Data Contract</text>
-    <text x="12" y="81" class="dsc">Lock grain, keys,</text>
-    <text x="12" y="96" class="dsc">attribution &amp; field</text>
-    <text x="12" y="111" class="dsc">Data Dictionary</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#EEF2FF" stroke="#C7D2FE" />
-    <text x="74" y="143" class="out" fill="#4338CA">Zero Fan-Out</text>
-  </g>
-
-  <!-- Stage 03 -->
-  <g transform="translate(358, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#7C3AED" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#F5F3FF" stroke="#DDD6FE" />
-    <circle cx="21" cy="23" r="2.2" fill="none" stroke="#7C3AED" stroke-width="1.4" />
-    <circle cx="31" cy="28" r="2.2" fill="none" stroke="#7C3AED" stroke-width="1.4" />
-    <circle cx="21" cy="33" r="2.2" fill="none" stroke="#7C3AED" stroke-width="1.4" />
-    <path d="M 23.2 23.8 L 28.8 27.1 M 23.2 32.2 L 28.8 28.9" stroke="#7C3AED" stroke-width="1.4" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#7C3AED">03</text>
-
-    <text x="12" y="62" class="ttl">ETL &amp; Ingestion</text>
-    <text x="12" y="81" class="dsc">Meta Ads, Haravan,</text>
-    <text x="12" y="96" class="dsc">MISA AMIS via n8n,</text>
-    <text x="12" y="111" class="dsc">Python &amp; SQL</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#F5F3FF" stroke="#DDD6FE" />
-    <text x="74" y="143" class="out" fill="#6D28D9">Clean Staging</text>
-  </g>
-
-  <!-- Stage 04 -->
-  <g transform="translate(525, 64)">
-    <rect width="148" height="164" rx="9" class="card" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#0D9488" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#F0FDFA" stroke="#99F6E4" />
-    <line x1="21" y1="34" x2="21" y2="28" stroke="#0D9488" stroke-width="1.8" stroke-linecap="round" />
-    <line x1="26" y1="34" x2="26" y2="22" stroke="#0D9488" stroke-width="1.8" stroke-linecap="round" />
-    <line x1="31" y1="34" x2="31" y2="25.5" stroke="#0D9488" stroke-width="1.8" stroke-linecap="round" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#0D9488">04</text>
-
-    <text x="12" y="62" class="ttl">EDA &amp; Power BI</text>
-    <text x="12" y="81" class="dsc">Descriptive &amp; strat.</text>
-    <text x="12" y="96" class="dsc">Diagnostic EDA with</text>
-    <text x="12" y="111" class="dsc">reconciled DAX</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#F0FDFA" stroke="#99F6E4" />
-    <text x="74" y="143" class="out" fill="#0F766E">Verified BI</text>
-  </g>
-
-  <!-- Stage 05 -->
-  <g transform="translate(692, 64)">
-    <rect width="148" height="164" rx="9" fill="#FFFFFF" stroke="#10B981" stroke-opacity="0.5" stroke-width="1" />
-    <path d="M 0 9 Q 0 0 9 0 L 139 0 Q 148 0 148 9 L 148 3 L 0 3 Z" fill="#059669" />
-    <rect x="12" y="14" width="28" height="28" rx="7" fill="#ECFDF5" stroke="#A7F3D0" />
-    <rect x="19" y="22" width="14" height="12" rx="2" fill="none" stroke="#059669" stroke-width="1.4" />
-    <path d="M 22.5 26.5 L 25 28.5 L 22.5 30.5 M 27 30.5 H 30" fill="none" stroke="#059669" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="135" y="32" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#059669">05</text>
-
-    <text x="12" y="62" class="ttl">Ops &amp; Web Apps</text>
-    <text x="12" y="81" class="dsc">Lark Base HRM/Ops</text>
-    <text x="12" y="96" class="dsc">portals &amp; React /</text>
-    <text x="12" y="111" class="dsc">TypeScript tools</text>
-
-    <rect x="12" y="128" width="124" height="23" rx="5" fill="#ECFDF5" stroke="#A7F3D0" />
-    <text x="74" y="143" class="out" fill="#047857">Live Ops Handoff</text>
-  </g>
+  <!-- Crisp outer architectural border -->
+  <rect x="0.5" y="0.5" width="863" height="243" rx="10" fill="none" stroke="#D4D8DF" stroke-width="1" />
 </svg>
